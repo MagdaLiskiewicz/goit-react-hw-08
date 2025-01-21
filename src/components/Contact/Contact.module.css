@@ -12,7 +12,7 @@
 }
 
 .contactText {
-  font-size: 20px;
+  font-size: 18px;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -25,7 +25,9 @@
 }
 
 .contactIcon {
-  fill: #052a4b;
+  fill: #065096;
+  width: 18px;
+  height: 18px;
 }
 
 .btn {
@@ -50,4 +52,16 @@
 .btn:hover {
   background-color: #052a4b;
   color: #dce9f5;
+}
+
+@media screen and (min-width: 375px) {
+  .contact {
+    width: 335px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contact {
+    width: 360px;
+  }
 }

@@ -9,8 +9,8 @@ const ContactList = () => {
 
   return (
     <ul className={css.list}>
-      {filteredContacts.map(({ id, name, phone }) => (
-        <Contact key={id} id={id} name={name} phone={phone} />
+      {filteredContacts.map(({ id, name, number }) => (
+        <Contact key={id} id={id} name={name} number={number} />
       ))}
     </ul>
   );

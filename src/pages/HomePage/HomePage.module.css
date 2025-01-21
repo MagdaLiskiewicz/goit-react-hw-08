@@ -1,0 +1,147 @@
+.pageWrap {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  min-height: 600px;
+  justify-content: center;
+  gap: 20px;
+}
+
+.pageTopWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.titleWrap {
+  text-align: center;
+}
+
+.pageTitle {
+  font-size: 28px;
+  width: 100%;
+  max-width: 310px;
+  color: #0b0114;
+}
+.pageSubtitle {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.accent {
+  color: #065096;
+  font-weight: 600;
+}
+
+.titleIcon {
+  color: #065096;
+  width: 25px;
+  height: 25px;
+}
+.pageImg {
+  margin: 0 auto;
+  width: 150px;
+}
+
+.pageInform {
+  background: linear-gradient(135deg, #cfe7f3, #eff0f5);
+  border-radius: 16px;
+  box-shadow:
+    6px 6px 12px rgba(34, 45, 65, 0.4),
+    -6px -6px 12px rgba(240, 248, 255, 0.2);
+  padding: 10px 20px;
+  width: 100%;
+  max-width: 768px;
+  text-align: center;
+  color: #052a4b;
+  font-size: 16px;
+  margin: 0 auto;
+}
+
+.informText {
+  font-size: 14px;
+}
+
+.link {
+  color: #065096;
+  font-weight: 600;
+}
+
+.link:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+@media screen and (min-width: 768px) {
+  .pageWrap {
+    min-height: 520px;
+    padding: 0 0 10px 0;
+  }
+  .pageTopWrap {
+    flex-direction: row;
+    gap: 40px;
+  }
+  .titleWrap {
+    text-align: start;
+  }
+
+  .pageTitle {
+    font-size: 40px;
+    max-width: 580px;
+  }
+
+  .titleIcon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .pageSubtitle {
+    font-size: 20px;
+  }
+
+  .pageImg {
+    margin: 0;
+    width: 300px;
+  }
+
+  .pageInform {
+    font-size: 18px;
+  }
+
+  .informText {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .pageWrap {
+    min-height: 520px;
+  }
+  .pageTitle {
+    font-size: 52px;
+  }
+
+  .titleIcon {
+    width: 40px;
+    height: 40px;
+  }
+  .pageSubtitle {
+    font-size: 24px;
+  }
+  .pageImg {
+    width: 300px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .pageWrap {
+    min-height: 570px;
+  }
+  .pageImg {
+    width: 350px;
+  }
+}

@@ -1,0 +1,40 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.greetings {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  flex-direction: column;
+  font-weight: 700;
+}
+
+.user {
+  color: #065096;
+}
+
+.btn:hover {
+  background-color: #065096;
+  color: #dce9f5;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    gap: 20px;
+  }
+  .username {
+    font-size: 20px;
+  }
+
+  .greetings {
+    flex-direction: row;
+    gap: 4px;
+  }
+
+  .btn {
+    width: 100px;
+  }
+}

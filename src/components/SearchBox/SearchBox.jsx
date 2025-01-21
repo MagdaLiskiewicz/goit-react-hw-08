@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { changeFilter } from "../../redux/filtersSlice";
 import css from "./SearchBox.module.css";
 import { selectFilter } from "../../redux/selectors";
+import { ImSearch } from "react-icons/im";
 
 const SearchBox = () => {
   const dispatch = useDispatch();
@@ -13,15 +14,20 @@ const SearchBox = () => {
 
   return (
     <form className={css.form}>
-      <label className={css.label}>
-        <span>Find contacts by name</span>
-        <input
-          className={css.input}
-          type="text"
-          value={filter}
-          onChange={handleFilterChange}
-        />
-      </label>
+      <h2 className={css.title}>
+        <ImSearch className={css.icon} /> Find contacts
+      </h2>
+
+      <input
+        className={css.input}
+        type="text"
+        name="search"
+        id="search"
+        value={filter}
+        onChange={handleFilterChange}
+        placeholder="Try search by name or number"
+        aria-label="Search contacts by name or phone number"
+      />
     </form>
   );
 };

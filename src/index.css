@@ -3,7 +3,7 @@
   line-height: 1.5;
   font-weight: 400;
   color: #1c1c1d;
-  background-color: #fcfcfc;
+  background-color: #eff0f5;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -54,4 +54,25 @@ button {
 
 img {
   display: block;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: transparent;
+  padding: 10px;
+  border-radius: 16px;
+  border: none;
+  height: 48px;
+  background-color: #dce9f5;
+  color: #052a4b;
+  font-weight: 600;
+  box-shadow:
+    6px 6px 12px rgba(34, 45, 65, 0.4),
+    -6px -6px 12px rgba(240, 248, 255, 0.2);
+  transition: all 0.3s ease;
 }

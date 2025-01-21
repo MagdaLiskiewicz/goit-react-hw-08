@@ -1,38 +1,72 @@
-import ContactForm from "./ContactForm/ContactForm.jsx";
-import ContactList from "./ContactList/ContactList.jsx";
-import SearchBox from "./SearchBox/SearchBox.jsx";
-import { FaAddressBook } from "react-icons/fa";
-import { Toaster } from "react-hot-toast";
-
 import css from "./App.module.css";
 import "modern-normalize/modern-normalize.css";
+import { Route, Routes } from "react-router-dom";
+import { SharedLayout } from "./SharedLayout/SharedLayout.jsx";
+import { lazy, useEffect } from "react";
+import RestrictedRoute from "./Restricted/RestrictedRoute.jsx";
+import PrivateRoute from "./PrivateRoute/PrivateRoute.jsx";
+import { refreshUser } from "../redux/auth/authOperations.js";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
-import { fetchContacts } from "../redux/operations";
-import { selectError, selectIsLoading } from "../redux/selectors.js";
-import Loader from "./Loader/Loader.jsx";
+import { selectIsRefreshing } from "../redux/auth/authSelectors.js";
+import { Toaster } from "react-hot-toast";
+
+const HomePage = lazy(() => import("../pages/HomePage/HomePage.jsx"));
+const ContactsPage = lazy(
+  () => import("../pages/ContactsPage/ContactsPage.jsx")
+);
+const LoginPage = lazy(() => import("../pages/LoginPage/LoginPage.jsx"));
+const RegisterPage = lazy(
+  () => import("../pages/RegisterPage/RegisterPage.jsx")
+);
+const NotFoundPage = lazy(
+  () => import("../pages/NotFoundPage/NotFoundPage.jsx")
+);
 
 const App = () => {
+  const isRefreshing = useSelector(selectIsRefreshing);
   const dispatch = useDispatch();
-  const error = useSelector(selectError);
-  const isLoading = useSelector(selectIsLoading);
 
   useEffect(() => {
-    dispatch(fetchContacts());
+    dispatch(refreshUser());
   }, [dispatch]);
 
-  return (
+  return isRefreshing ? null : (
     <div className={css.container}>
-      <h1 className={css.title}>
-        <FaAddressBook className={css.titleIcon} size="40" />
-        Phonebook
-      </h1>
-      <Toaster position="top-right" reverseOrder={false} />
-      <ContactForm />
-      <SearchBox />
-      {isLoading && !error && <Loader />}
+      <Toaster />
+      <SharedLayout>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route
+            path="/contacts"
+            element={
+              <PrivateRoute
+                redirectPath="/login"
+                component={<ContactsPage />}
+              />
+            }
+          />
+          <Route
+            path="/register"
+            element={
+              <RestrictedRoute
+                redirectPath="/contacts"
+                component={<RegisterPage />}
+              />
+            }
+          />
+          <Route
+            path="/login"
+            element={
+              <RestrictedRoute
+                redirectPath="/contacts"
+                component={<LoginPage />}
+              />
+            }
+          />
 
-      <ContactList />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </SharedLayout>
     </div>
   );
 };

@@ -6,6 +6,7 @@ import css from "./ContactForm.module.css";
 import { toast } from "react-hot-toast";
 import { addContact } from "../../redux/operations";
 import { selectContacts } from "../../redux/selectors";
+import { MdAddIcCall } from "react-icons/md";
 
 const initialValues = {
   name: "",
@@ -33,7 +34,7 @@ const ContactForm = () => {
     const isDuplicate = contacts.some(
       (contact) =>
         contact.name.toLowerCase() === values.name.toLowerCase() ||
-        contact.phone === values.number
+        contact.number === values.number
     );
 
     if (isDuplicate) {
@@ -44,7 +45,7 @@ const ContactForm = () => {
     dispatch(
       addContact({
         name: values.name,
-        phone: values.number,
+        number: values.number,
       })
     );
 
@@ -59,6 +60,9 @@ const ContactForm = () => {
       validationSchema={FeedbackSchema}
     >
       <Form className={css.form}>
+        <h2 className={css.title}>
+          <MdAddIcCall className={css.icon} /> New contact
+        </h2>
         <div className={css.fieldWrapper}>
           <label htmlFor="name" className={css.label}>
             Name

@@ -4,7 +4,7 @@ import { FaUser, FaPhoneAlt } from "react-icons/fa";
 import PropTypes from "prop-types";
 import { deleteContact } from "../../redux/operations";
 
-const Contact = ({ id, name, phone }) => {
+const Contact = ({ id, name, number }) => {
   const dispatch = useDispatch();
   const handleDelete = () => {
     dispatch(deleteContact(id));
@@ -19,7 +19,7 @@ const Contact = ({ id, name, phone }) => {
         </span>
         <span className={css.info}>
           <FaPhoneAlt className={css.contactIcon} />
-          {phone}
+          {number}
         </span>
       </div>
       <button className={css.btn} type="button" onClick={handleDelete}>
@@ -32,7 +32,7 @@ const Contact = ({ id, name, phone }) => {
 Contact.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  phone: PropTypes.string.isRequired,
+  number: PropTypes.string.isRequired,
 };
 
 export default Contact;

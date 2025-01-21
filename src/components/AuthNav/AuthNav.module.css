@@ -1,0 +1,49 @@
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #0b0114;
+}
+
+.link {
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+.link:hover {
+  color: #065096;
+  background-color: #fff;
+}
+
+.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  outline: transparent;
+  border-radius: 16px;
+  border: none;
+  padding: 5px;
+  height: 48px;
+  background-color: #065096;
+  color: #dce9f5;
+  font-weight: 600;
+  box-shadow:
+    6px 6px 12px rgba(34, 45, 65, 0.4),
+    -6px -6px 12px rgba(240, 248, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+@media screen and (min-width: 375px) {
+  .active {
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .active {
+    width: 100px;
+  }
+}
