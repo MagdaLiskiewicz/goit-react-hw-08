@@ -3,6 +3,7 @@ import Container from "../../components/Container/Container";
 import DocumentTitle from "../../components/DocumentTitle";
 import RegisterForm from "../../components/RegisterForm/RegisterForm";
 import css from "./RegisterPage.module.css";
+import image from "../../assets/images/registration (1).jpg";
 
 export function RegisterPage() {
   return (
@@ -11,16 +12,16 @@ export function RegisterPage() {
       <Container>
         <div className={css.pageWrap}>
           <div className={css.pageTopWrap}>
-            <div className={css.title}>
+            <div className={css.titleWrap}>
               <h1 className={css.pageTitle}>Join Us!</h1>
               <p className={css.text}>
                 Create an account to start managing your contacts.
               </p>
               <img
                 className={css.pageImg}
-                // src={image}
+                src={image}
                 alt="people creating account"
-                width="400"
+                width="200"
               />
             </div>
             <RegisterForm />

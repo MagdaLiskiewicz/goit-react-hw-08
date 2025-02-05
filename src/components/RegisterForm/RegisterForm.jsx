@@ -26,14 +26,7 @@ export default function RegisterForm() {
   });
 
   const handleSubmit = (values, actions) => {
-    dispatch(register(values))
-      .unwrap()
-      .then(() => {
-        console.log("login success");
-      })
-      .catch(() => {
-        console.log("login error");
-      });
+    dispatch(register(values));
     actions.resetForm();
   };
 

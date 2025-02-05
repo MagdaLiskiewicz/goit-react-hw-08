@@ -11,7 +11,7 @@ export function LoginPage() {
       <Container>
         <div className={css.pageWrap}>
           <div className={css.pageTopWrap}>
-            <div className={css.title}>
+            <div className={css.titleWrap}>
               <h1 className={css.pageTitle}>Welcome Back!</h1>
               <p className={css.text}>Log in to access your contacts.</p>
             </div>

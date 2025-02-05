@@ -1,8 +1,10 @@
 .contact {
-  background-color: #dce9f5;
-  box-shadow: 0px 0px 10px 1px #0e5992;
+  background: linear-gradient(135deg, #cfe7f3, #eff0f5);
   border-radius: 16px;
-  box-sizing: border-box;
+  box-shadow:
+    6px 6px 12px rgba(34, 45, 65, 0.4),
+    -6px -6px 12px rgba(240, 248, 255, 0.2);
+
   width: 364px;
   display: flex;
   justify-content: space-between;
@@ -31,13 +33,9 @@
 }
 
 .btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
   width: 120px;
   height: 48px;
-  padding: 10px;
+  /* padding: 10px;
   border-radius: 16px;
   border: none;
   background-color: #b2cee498;
@@ -46,12 +44,7 @@
   box-shadow:
     6px 6px 12px rgba(34, 45, 65, 0.4),
     -6px -6px 12px rgba(240, 248, 255, 0.2);
-  transition: all 350ms linear;
-}
-
-.btn:hover {
-  background-color: #052a4b;
-  color: #dce9f5;
+  transition: all 350ms linear; */
 }
 
 @media screen and (min-width: 375px) {

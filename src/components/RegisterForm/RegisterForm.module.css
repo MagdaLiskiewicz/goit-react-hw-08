@@ -2,7 +2,7 @@
   display: flex;
   gap: 10px;
   flex-direction: column;
-  background: linear-gradient(145deg, #dce9f5, #f5f3ed);
+  background: linear-gradient(135deg, #cfe7f3, #eff0f5);
   border-radius: 16px;
   box-shadow:
     6px 6px 12px rgba(34, 45, 65, 0.4),
@@ -71,10 +71,6 @@
 .btn {
   width: 150px;
 }
-.btn:hover {
-  background-color: #065096;
-  color: #dce9f5;
-}
 
 @media screen and (min-width: 375px) {
   .form {
@@ -84,7 +80,7 @@
 
 @media screen and (min-width: 768px) {
   .form {
-    /* width: 360px; */
+    width: 360px;
     flex-shrink: 0;
   }
 }

@@ -2,15 +2,17 @@
   display: flex;
   gap: 10px;
   flex-direction: column;
-
+  background: linear-gradient(135deg, #cfe7f3, #eff0f5);
   border-radius: 16px;
-  background-color: #b2cee498;
-  box-shadow: 0px 0px 10px 1px #0e5992;
+  box-shadow:
+    6px 6px 12px rgba(34, 45, 65, 0.4),
+    -6px -6px 12px rgba(240, 248, 255, 0.2);
   padding: 10px 20px 20px;
   width: 100%;
   align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
   margin: 0 auto;
-  margin-bottom: 20px;
 }
 
 .icon {

@@ -4,6 +4,7 @@ import DocumentTitle from "../../components/DocumentTitle";
 import { useSelector } from "react-redux";
 import { selectIsLoggedIn } from "../../redux/auth/authSelectors";
 import css from "./HomePage.module.css";
+import image from "../../assets/images/phonebook.jpg";
 
 export function HomePage() {
   const isLoggedIn = useSelector(selectIsLoggedIn);
@@ -25,7 +26,7 @@ export function HomePage() {
               </h2>
             </div>
             <img
-              // src={image}
+              src={image}
               alt="phonebook"
               className={css.pageImg}
               width="350"

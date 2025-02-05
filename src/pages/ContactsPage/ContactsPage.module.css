@@ -1,11 +1,20 @@
+.pageWrap {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  /* min-height: 700px; */
+  /* justify-content: center; */
+  gap: 20px;
+  padding: 0 0 10px;
+}
+
 .pageTopWrap {
   display: flex;
-  width: 100%;
+  /* width: 100%; */
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+
   gap: 10px;
-  margin-bottom: 10px;
 }
 
 .titleWrap {
@@ -31,11 +40,11 @@
 
 .pageImg {
   margin: 0 auto;
-  width: 150px;
+  width: 0px;
 }
 
 .error {
-  background: linear-gradient(145deg, #dce9f5, #f5f3ed);
+  background: linear-gradient(135deg, #cfe7f3, #eff0f5);
   border-radius: 16px;
   box-shadow:
     6px 6px 12px rgba(34, 45, 65, 0.4),
@@ -60,11 +69,17 @@
 }
 
 @media screen and (min-width: 768px) {
+  .pageWrap {
+    /* justify-content: center; */
+    min-height: 510px;
+  }
+
   .pageTopWrap {
     flex-direction: row;
-    align-items: start;
+    align-items: center;
     gap: 40px;
     margin-bottom: 20px;
+    justify-content: space-between;
   }
 
   .titleWrap {
@@ -73,7 +88,7 @@
 
   .pageTitle {
     font-size: 40px;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
   }
   .titleIcon {
     width: 30px;
@@ -82,19 +97,20 @@
 
   .pageImg {
     margin: 0;
-    width: 320px;
+    width: 280px;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .pageTopWrap {
-    align-items: center;
+    gap: 40px;
   }
 
   .pageTitle {
     width: 568px;
     font-size: 52px;
     margin-bottom: 10px;
+    justify-content: start;
   }
 
   .titleIcon {
@@ -103,6 +119,6 @@
   }
 
   .pageImg {
-    width: 380px;
+    /* width: 380px; */
   }
 }

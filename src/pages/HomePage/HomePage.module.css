@@ -16,13 +16,14 @@
 
 .titleWrap {
   text-align: center;
+  /* min-width: 568px; */
 }
 
 .pageTitle {
   font-size: 28px;
   width: 100%;
   max-width: 310px;
-  color: #0b0114;
+  /* color: #0b0114; */
 }
 .pageSubtitle {
   font-size: 18px;
@@ -41,7 +42,7 @@
 }
 .pageImg {
   margin: 0 auto;
-  width: 150px;
+  width: 200px;
 }
 
 .pageInform {
@@ -119,7 +120,8 @@
 
 @media screen and (min-width: 1024px) {
   .pageWrap {
-    min-height: 520px;
+    min-height: 600px;
+    gap: 40px;
   }
   .pageTitle {
     font-size: 52px;
@@ -134,14 +136,5 @@
   }
   .pageImg {
     width: 300px;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .pageWrap {
-    min-height: 570px;
-  }
-  .pageImg {
-    width: 350px;
   }
 }

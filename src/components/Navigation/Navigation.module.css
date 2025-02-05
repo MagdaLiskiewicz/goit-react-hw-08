@@ -16,6 +16,7 @@
 @media screen and (min-width: 768px) {
   .header {
     padding: 10px 20px;
+    margin-bottom: 20px;
   }
 }
 
@@ -78,5 +79,12 @@
 
   .active {
     width: 100px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    /* padding: 10px 20px; */
+    margin-bottom: 40px;
   }
 }

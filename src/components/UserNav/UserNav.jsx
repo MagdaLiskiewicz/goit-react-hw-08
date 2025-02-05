@@ -12,7 +12,7 @@ export function UserNav() {
   return (
     <div className={css.wrapper}>
       <p className={css.greetings}>
-        Welcome, <span className={css.user}>{user.name}</span>!
+        Welcome, <span className={css.user}>{user.name}!</span>
       </p>
       <button onClick={handleLogOut} className={css.btn} type="button">
         Log Out
